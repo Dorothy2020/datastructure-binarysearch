@@ -1,15 +1,15 @@
-# import math
+import math
 
 
-# print(math.sqrt(49))
+print(math.sqrt(49))
 # Arranging the numbers in an array fromdecreasing order
 
 
 
-# list_num=[10,9,8,7,6,5,4,3,2,1]
-# # Accessing the number by use of indexing
-# x=list_num[3]
-# print(x)
+list_num=[10,9,8,7,6,5,4,3,2,1]
+# Accessing the number by use of indexing
+x=list_num[3]
+print(x)
 
 
 # Iterative Binary Search Function
@@ -17,42 +17,42 @@
 # else returns -1
 
 
-# def binary_search(arr, x):
-#     low = 0
-#     high = len(arr) - 1
-#     mid = 0
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0
  
-#     while low <= high:
+    while low <= high:
  
-#         mid = (high + low) // 2
+        mid = (high + low) // 2
  
-#         # If x is greater, ignore left half
-#         if arr[mid] < x:
-#             low = mid + 1
+        # If x is greater, ignore left half
+        if arr[mid] < x:
+            low = mid + 1
  
-#         # If x is smaller, ignore right half
-#         elif arr[mid] > x:
-#             high = mid - 1
+        # If x is smaller, ignore right half
+        elif arr[mid] > x:
+            high = mid - 1
  
-#         # means x is present at mid
-#         else:
-#             return mid
+        # means x is present at mid
+        else:
+            return mid
  
-#     # If we reach here, then the element was not present
-#     return -1
+    # If we reach here, then the element was not present
+    return -1
  
  
-# # Test array
-# arr = [ 2, 3, 4, 10, 40 ]
-# x = 10
+# Test array
+arr = [ 2, 3, 4, 10, 40 ]
+x = 10
  
-# # Function call
-# result = binary_search(arr, x)
+# Function call
+result = binary_search(arr, x)
  
-# if result != -1:
-#     print("Element is present at index", str(result))
-# else:
-#     print("Element is not present in array")
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in array")
 # Create a python list of size MAX_HASH_TABLE_SIZE
 # HASH TABLE
 data_list=[None]*4096
@@ -81,7 +81,16 @@ class Graph:
             self.data[n1].append(n2)
             self.data[n2].append(n1)
 graph1=Graph(num_nodes,edges) 
-print(graph1.data)        
+print(graph1.data)     
+
+
+# Linear Search
+def linear_search(L,e):
+    found=False
+    for i in range(len(L)):
+        if e ==L[i]:
+            found =True
+        return found
 
 
 
